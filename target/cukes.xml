@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="312.125">
+    <testcase classname="Validate the order placement" name="Validate the user is able to place the order" time="311.903">
+        <system-out>
+            <![CDATA[Given User is on Greenkart homepage.........................................passed
+When user searched with shortname Tom and extracted the actual item name....passed
+And added "3"  items of the selected product to cart........................passed
+Then user proceeds to checkout page and validate the Tom item in checkout page.passed
+And verify user has ability to enter promocode and place the order..........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Search Feature validation in both home and landing pages" name="Validate the search result consistency in both homepage and landing pages" time="18.455">
+        <system-out>
+            <![CDATA[Given User is on Greenkart homepage.........................................passed
+When user searched with shortname Tom and extracted the actual item name....passed
+Then user searched for the same short name Tom in offerspage................passed
+And validate the product name in offers page matches with actual item name inLanding page.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Search Feature validation in both home and landing pages" name="Validate the search result consistency in both homepage and landing pages 2" time="17.981">
+        <failure message="expected [Beetroot] but found [No data]" type="java.lang.AssertionError">
+            <![CDATA[Given User is on Greenkart homepage.........................................passed
+When user searched with shortname Beet and extracted the actual item name...passed
+Then user searched for the same short name Beet in offerspage...............passed
+And validate the product name in offers page matches with actual item name inLanding page.failed
+
+StackTrace:
+java.lang.AssertionError: expected [Beetroot] but found [No data]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at stepDefinations.OffersPage.validate_the_product_name_in_offers_page_matches_with_actual_item_name_in_landing_page(OffersPage.java:56)
+	at ✽.validate the product name in offers page matches with actual item name inLanding page(file:///E:/Projects/Selenium/CucumberFramework/src/test/java/features/First.feature:10)
+]]>
+        </failure>
+    </testcase>
+</testsuite>
