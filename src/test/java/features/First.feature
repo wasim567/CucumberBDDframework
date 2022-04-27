@@ -23,6 +23,6 @@ Feature: Search Feature validation in both home and landing pages
     And validate the product name in offers page matches with actual item name inLanding page
     
     Examples:
-    |Name|
+    |Naame|
     |Tom|
    
