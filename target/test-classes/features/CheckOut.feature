@@ -20,5 +20,13 @@ Feature: Validate the order placement
     When user enters username and password
     Then user is able to login
     
+    Scenario: Validate the user is able to login2
+    Given User is on Greenkart homepage
+    When user enters username and password
+    Then user is able to login
+    
+    
+    
+    
    
  
